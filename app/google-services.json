@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "256507125592",
+    "project_id": "jobthree-e5d2d",
+    "storage_bucket": "jobthree-e5d2d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256507125592:android:20ea9c32810d66ce250f2d",
+        "android_client_info": {
+          "package_name": "com.example.jobthree"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCHFZ-3hl5CRqq5-3yw_L-7q-0oG0pfCq4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
