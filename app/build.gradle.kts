@@ -52,12 +52,12 @@ dependencies {
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.navigation.compose)
-    implementation(libs.firebase.auth)
     implementation(libs.androidx.credentials)
     implementation(libs.androidx.credentials.play.services.auth)
     implementation(libs.googleid)
-    implementation(libs.firebase.firestore)
     implementation(libs.play.services.location)
+    implementation(libs.firebase.auth)
+    implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -73,7 +73,8 @@ dependencies {
 
     //coil
     implementation("io.coil-kt:coil-compose:2.7.0")
-
     implementation("com.google.accompanist:accompanist-permissions:0.34.0")
+
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
 
 }

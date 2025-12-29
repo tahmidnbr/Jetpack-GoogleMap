@@ -11,8 +11,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.jobthree.repository.FirebaseRepo
-import com.example.jobthree.screens.GMScreen
+import com.example.jobthree.screens.AllUsersMapScreen
 import com.example.jobthree.screens.LoginScreen
+import com.example.jobthree.screens.MapScreen
 import com.example.jobthree.screens.MyProfile
 import com.example.jobthree.screens.RegScreen
 import com.example.jobthree.ui.theme.JobThreeTheme
@@ -54,11 +55,14 @@ class MainActivity : ComponentActivity() {
                     ) { backStackEntry ->
                         val uid = backStackEntry.arguments?.getString("uid") ?: ""
                         val username = backStackEntry.arguments?.getString("username") ?: "Unknown"
-                        GMScreen(locationViewModel = locationViewModel, uid = uid, username = username)
+                        MapScreen(locationViewModel = locationViewModel,  uid, username)
                     }
 
                     composable("profile") {
                         MyProfile(navController = navController,  authViewModel = authViewModel)
+                    }
+                    composable("map") {
+                        AllUsersMapScreen(authViewModel=authViewModel)
                     }
 
 

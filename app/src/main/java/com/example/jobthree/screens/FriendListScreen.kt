@@ -119,12 +119,13 @@ fun FriendCard(
                     verticalArrangement = Arrangement.Center
                 ) {
                     Text(
-                        user.username ?: user.email,
+                        user.username?.toUpperCase() ?: user.email,
                         fontSize = 20.sp,
-                        fontWeight = FontWeight.SemiBold
+                        fontWeight = FontWeight.SemiBold,
+                        color = Color.Black
                     )
                     Spacer(modifier = Modifier.height(6.dp))
-                    Text(user.email)
+                    Text(user.email, color = Color.Black, fontSize = 15.sp)
                 }
 
                 Spacer(modifier = Modifier.weight(1f))
@@ -162,8 +163,7 @@ fun FriendCardExtra(
 ){
     Row(
         modifier = Modifier
-            .fillMaxWidth()
-            .padding(horizontal = 12.dp),
+            .fillMaxWidth(),
         horizontalArrangement = Arrangement.SpaceBetween,
         verticalAlignment = Alignment.CenterVertically
     ) {
@@ -188,8 +188,9 @@ fun FriendCardExtra(
                 )
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
-                    "Show In Map",
-                    color = Color(0xff212121)
+                    "Show in map",
+                    color = Color(0xff212121),
+                    fontSize = 12.sp
                 )
             }
         }
@@ -213,7 +214,8 @@ fun FriendCardExtra(
                 Spacer(modifier = Modifier.width(8.dp))
                 Text(
                     "Send a message",
-                    color = Color(0xff212121)
+                    color = Color(0xff212121),
+                    fontSize = 12.sp
                 )
             }
         }

@@ -9,7 +9,7 @@ class FirebaseRepo {
     private val auth = FirebaseAuth.getInstance()
     private val db = FirebaseFirestore.getInstance()
 
-    fun  signupUser(
+    fun signupUser(
         email: String,
         password: String,
         onSuccess: () -> Unit,
@@ -102,9 +102,10 @@ class FirebaseRepo {
 
 
 
-    private fun  generateUsernameFromEmail(email: String) = email.substringBefore("@")
+    private fun generateUsernameFromEmail(email: String) =
+        email.substringBefore(".").substringBefore("@")
     private fun generateDiceAvatar(username: String): String{
         val seed = username
-        return "https://api.dicebear.com/6.x/initials/png?seed=$seed"
+        return "https://api.dicebear.com/9.x/thumbs/png?seed=$seed"
     }
 }
