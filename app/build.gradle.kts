@@ -70,6 +70,7 @@ dependencies {
 
     implementation("com.google.maps.android:maps-compose:4.3.3")
     implementation("com.google.android.gms:play-services-maps:18.2.0")
+    implementation("com.google.maps.android:maps-ktx:5.0.0")
 
     //coil
     implementation("io.coil-kt:coil-compose:2.7.0")

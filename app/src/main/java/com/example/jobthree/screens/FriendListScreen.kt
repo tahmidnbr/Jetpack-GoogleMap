@@ -116,19 +116,26 @@ fun FriendCard(
                 )
                 Spacer(modifier = Modifier.width(20.dp))
                 Column(
-                    verticalArrangement = Arrangement.Center
+                    verticalArrangement = Arrangement.Center,
+                    modifier = Modifier
+                        .weight(1f)
+                        .fillMaxWidth()
                 ) {
                     Text(
                         user.username?.toUpperCase() ?: user.email,
                         fontSize = 20.sp,
+                        maxLines = 1,
                         fontWeight = FontWeight.SemiBold,
                         color = Color.Black
                     )
                     Spacer(modifier = Modifier.height(6.dp))
-                    Text(user.email, color = Color.Black, fontSize = 15.sp)
+                    Text(user.email,
+                        color = Color.Black,
+                        fontSize = 15.sp,
+                        maxLines = 1,
+                    )
                 }
 
-                Spacer(modifier = Modifier.weight(1f))
                 Button(
                     onClick = {
                         expended = !expended
